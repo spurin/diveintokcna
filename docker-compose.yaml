@@ -109,7 +109,7 @@ services:
       - guest_home_worker-1:/home/guest
       - root_home_worker-1:/root
     ports: 
-     - 32535:80 # Main Page
+     - 8080:80 # Main Page
      - 32536:1000 # Web Tunnel
     networks:
      - kcna.diveinto.io
