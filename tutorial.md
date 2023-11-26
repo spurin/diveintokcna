@@ -9,7 +9,7 @@ Execute the following command to setup the lab environment.
 For convenience you can send this to the terminal using the convenient 'Copy to Cloud Shell' icon on the top right of the text box
 
 ```bash
-sudo sed -i 's/--registry-mirror=https:\/\/eu-mirror.gcr.io//g' /etc/default/docker; sudo /etc/init.d/docker restart; bin/docker-compose down -v; bin/docker-compose pull; bin/docker-compose up -d
+sudo sed -i 's/--registry-mirror=https:\/\/[^ ]*//g' /etc/default/docker; sudo /etc/init.d/docker restart; bin/docker-compose down -v; bin/docker-compose pull; bin/docker-compose up -d
 ```
 
 When this completes, you'll see text similar to the following -
