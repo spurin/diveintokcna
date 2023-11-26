@@ -15,10 +15,22 @@ bin/docker-compose up -d
 When this completes, you'll see text similar to the following -
 
 ```terminal
-[+] Running 3/3
- ✔ Network kubernetes.cloudshell.diveinto.io                             Created                                                                      0.1s 
- ✔ Container control-plane-dive-into-kubernetes-introduction-cloudshell  St...                                                                        5.7s 
- ✔ Container portal-dive-into-kubernetes-introduction-cloudshell         Started                                                                      1.1s 
+[+] Running 15/15
+ ✔ Network kcna.diveinto.io                        Created                                                                                           0.1s 
+ ✔ Network diveintokcna_default                    Created                                                                                           0.1s 
+ ✔ Volume "diveintokcna_guest_home_control-plane"  Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_root_home_control-plane"   Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_shared"                    Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_guest_home_worker-1"       Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_root_home_worker-1"        Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_guest_home_worker-2"       Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_root_home_worker-2"        Created                                                                                           0.0s 
+ ✔ Volume "diveintokcna_config"                    Created                                                                                           0.0s 
+ ✔ Container shared-ssh-keys-dive-into-kcna        Exited                                                                                            4.4s 
+ ✔ Container worker-2-dive-into-kcna               Started                                                                                           2.5s 
+ ✔ Container worker-1-dive-into-kcna               Started                                                                                           2.4s 
+ ✔ Container control-plane-dive-into-kcna          Started                                                                                           2.4s 
+ ✔ Container portal-dive-into-kcna                 Started                                                                                           3.0s 
 ```
 
 To access the Portal, click the Web Preview Icon, if you cant find it, click -> <walkthrough-web-preview-icon>here</walkthrough-web-preview-icon> for a walkthrough on where to find it.  
