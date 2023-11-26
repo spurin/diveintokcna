@@ -1,0 +1,136 @@
+version: '3.8' # if no version is specified then v1 is assumed. Recommend v2 minimum
+
+services:
+
+  # Autoconfigure SSH Keys and Default configuration files for users
+  ssh-keys-and-config:
+    hostname: shared-ssh-keys
+    container_name: shared-ssh-keys-dive-into-kcna
+    image: spurin/ssh-client
+    deploy:
+      restart_policy:
+        max_attempts: 0
+    volumes:
+     - config:/config
+    command: |
+      bash -c 'rm -rf /config/*; ssh-keygen -f /config/guest_ssh -P "" <<< y; cp -rf /config/guest_ssh /config/root_ssh; cp -rf /config/guest_ssh.pub /config/root_ssh.pub; echo guest > /config/guest_name; echo guest > /config/guest_passwd; echo "/bin/bash" > /config/guest_shell; echo root > /config/root_passwd'
+
+  control-plane:
+    hostname: control-plane
+    container_name: control-plane-dive-into-kcna
+    image: spurin/diveintokcna-lab:control-plane
+    tmpfs:
+    - /run
+    - /var/run
+    privileged: true
+    depends_on:
+      ssh-keys-and-config:
+        condition: service_completed_successfully
+    volumes:
+      # Use an anonymous volume for /var
+      - /var
+      # Satisy kubeadm checks
+      - /lib/modules:/lib/modules:ro
+      - /usr/src:/usr/src:ro
+      # Config and home directories
+      - config:/config
+      - guest_home_control-plane:/home/guest
+      - root_home_control-plane:/root
+      # Shared
+      - shared:/shared
+    networks:
+     - kcna.diveinto.io
+
+  worker-1:
+    hostname: worker-1
+    container_name: worker-1-dive-into-kcna
+    image: spurin/diveintokcna-lab:control-plane
+    tmpfs:
+    - /run
+    - /var/run
+    privileged: true
+    depends_on:
+      ssh-keys-and-config:
+        condition: service_completed_successfully
+    volumes:
+      # Use an anonymous volume for /var
+      - /var
+      # Satisy kubeadm checks
+      - /lib/modules:/lib/modules:ro
+      - /usr/src:/usr/src:ro
+      # Config and home directories
+      - config:/config
+      - guest_home_worker-1:/home/guest
+      - root_home_worker-1:/root
+      # Shared
+      - shared:/shared
+    networks:
+     - kcna.diveinto.io
+
+  worker-2:
+    hostname: worker-2
+    container_name: worker-2-dive-into-kcna
+    image: spurin/diveintokcna-lab:control-plane
+    tmpfs:
+    - /run
+    - /var/run
+    privileged: true
+    depends_on:
+      ssh-keys-and-config:
+        condition: service_completed_successfully
+    volumes:
+      # Use an anonymous volume for /var
+      - /var
+      # Satisy kubeadm checks
+      - /lib/modules:/lib/modules:ro
+      - /usr/src:/usr/src:ro
+      # Config and home directories
+      - config:/config
+      - guest_home_worker-2:/home/guest
+      - root_home_worker-2:/root
+      # Shared
+      - shared:/shared
+    networks:
+     - kcna.diveinto.io
+
+  portal:
+    hostname: portal
+    container_name: portal-dive-into-kcna
+    image: spurin/diveintokcna-lab:portal
+    privileged: true
+    depends_on:
+     control-plane:
+       condition: service_started
+     ssh-keys-and-config:
+       condition: service_completed_successfully
+    volumes:
+      # Config and home directories
+      - config:/config
+      - guest_home_worker-1:/home/guest
+      - root_home_worker-1:/root
+    ports: 
+     - 32535:80 # Main Page
+     - 32536:1000 # Web Tunnel
+    networks:
+     - kcna.diveinto.io
+
+volumes:
+  config:
+  guest_home_control-plane:
+  guest_home_worker-1:
+  guest_home_worker-2:
+  root_home_control-plane:
+  root_home_worker-1:
+  root_home_worker-2:
+  shared:
+
+networks:
+  kcna.diveinto.io:
+    name: kcna.diveinto.io
+    # Canonical bridge interface name
+    #
+    # The setting below provides a friendly name for the bridge interface
+    # as seen in the likes of the ip command.  Use at your own discretion
+    #
+    #driver_opts:
+    #  com.docker.network.bridge.name: "kcna.diveinto.io"
