@@ -7,7 +7,7 @@
 
 Video course is available at -
 
-* [DiveInto](https://diveinto.com/p/dive-into-kubernetes-get-started-with-docker-and-kubernetes)
+* [DiveInto](https://diveinto.com/p/dive-into-cloud-native-containers-kubernetes-and-the-kcna)
 
 ✨ [Slack Community - Join our community to interact with myself and other students](https://community.diveinto.com)
 
