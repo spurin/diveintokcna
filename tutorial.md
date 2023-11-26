@@ -30,5 +30,5 @@ When accessing terminals, the default credentials are root/root
 Should you require, you can factory reset the environment with the following, your terminals will disconnect and reconnect -
 
 ```bash
-bin/docker-compose down -v; bin/docker-compose up -d
+sudo sed -i 's/--registry-mirror=https:\/\/eu-mirror.gcr.io//g' /etc/default/docker; sudo /etc/init.d/docker restart; bin/docker-compose down -v; bin/docker-compose pull; bin/docker-compose up -d
 ```
