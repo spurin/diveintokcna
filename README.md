@@ -10,4 +10,4 @@ Alternatively, the lab can be installed using the command line by executing -
 docker extension install spurin/diveintokcna-lab-extension
 ```
 
-![DiveInto](https://https://raw.githubusercontent.com/spurin/diveintokcna/main/DiveIntoKCNA_Cover.png)
+![DiveInto](https://raw.githubusercontent.com/spurin/diveintokcna/main/DiveIntoKCNA_Cover.png)
