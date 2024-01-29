@@ -33,7 +33,15 @@ When this completes, you'll see text similar to the following -
  ✔ Container portal-dive-into-kcna                 Started                                                                                           3.0s 
 ```
 
-To access the Portal, click the Web Preview Icon, if you cant find it, click -> <walkthrough-web-preview-icon>here</walkthrough-web-preview-icon> for a walkthrough on where to find it.  
+In the lab environment we make use of a convenient Reverse Proxy to access Kubernetes web services. Sometimes, we may need to permit access to this from Google Cloud Shell. 
+
+Let's confirm that this is accessible. Run the following command to create your URL endpoint. Once done, click the generated URL, you should see the DiveInto Reverse Proxy with a blue background. You can then close the tab and continue.
+
+```bash
+echo https://32536-$WEB_HOST/testproxy
+```
+
+With the proxy running we can now access the Portal, click the Web Preview Icon, if you cant find it, click -> <walkthrough-web-preview-icon>here</walkthrough-web-preview-icon> for a walkthrough on where to find it.
 
 Select 'Preview on Port 8080' and you're good to go!  
 
