@@ -1,10 +1,10 @@
-name: Quiz Question Issue
+name: Quiz Question Report
 description: Report an issue with a quiz question
-title: "[Quiz Question Issue]: <Enter quiz question issue title here>"
+title: "[Quiz Question Report]: <Enter quiz question issue title here>"
 body:
   - type: markdown
     attributes:
-      value: "## Quiz Question Issue Report\nWe appreciate your time in providing feedback on our quiz questions. Your insights are crucial for ensuring the quality and accuracy of our quizzes."
+      value: "## Quiz Question Report Report\nWe appreciate your time in providing feedback on our quiz questions. Your insights are crucial for ensuring the quality and accuracy of our quizzes."
 
   - type: input
     id: course-access-location
