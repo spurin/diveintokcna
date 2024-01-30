@@ -1,0 +1,63 @@
+name: Lab Issue Report
+description: Report an issue with a lab
+title: "[Lab Issue]: <Enter lab issue title here>"
+body:
+  - type: markdown
+    attributes:
+      value: "## Lab Issue Report\nThank you for taking the time to report an issue with our lab. Your feedback is essential in helping us improve the lab experience."
+
+  - type: dropdown
+    id: lab-running-method
+    attributes:
+      label: How is the lab being run?
+      description: Please select the method you're using to run the lab.
+      options:
+        - Docker Desktop Extension
+        - Google Cloud Shell
+        - Docker Compose
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: What Operating System
+      description: What operating system are you using?
+      placeholder: Enter your operating system here (e.g. Windows, macOS, Linux, Other)
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: What Browser
+      description: What browser are you using to access the lab?
+      placeholder: Enter your browser here (e.g. Chrome, Firefox, Safari, Docker Desktop)
+    validations:
+      required: true
+
+  - type: input
+    id: lab-details
+    attributes:
+      label: What lab is being accessed
+      description: Please specify which lab you are working on.
+      placeholder: Enter the lab name or number
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Describe the Issue
+      description: Please provide a detailed description of the issue you're encountering.
+      placeholder: Enter the details of your issue here
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-feedback
+    attributes:
+      label: Any other feedback
+      description: Do you have any other feedback or comments about the lab?
+      placeholder: Enter any additional feedback here
