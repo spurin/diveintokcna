@@ -4,7 +4,7 @@ title: "[Lab Issue]: <Enter lab issue title here>"
 body:
   - type: markdown
     attributes:
-      value: "## Lab Issue Report\nThank you for taking the time to report an issue with our lab. Your feedback is essential in helping us improve the lab experience."
+      value: "## Lab Issue Report\nThank you for taking the time to report an issue with our lab. Your detailed feedback is essential in helping us improve the lab experience."
 
   - type: dropdown
     id: lab-running-method
@@ -22,25 +22,25 @@ body:
   - type: input
     id: operating-system
     attributes:
-      label: What Operating System
+      label: Operating System
       description: What operating system are you using?
-      placeholder: Enter your operating system here (e.g. Windows, macOS, Linux, Other)
+      placeholder: Enter your operating system here (e.g., Windows, macOS, Linux, Other)
     validations:
       required: true
 
   - type: input
     id: browser
     attributes:
-      label: What Browser
+      label: Browser
       description: What browser are you using to access the lab?
-      placeholder: Enter your browser here (e.g. Chrome, Firefox, Safari, Docker Desktop)
+      placeholder: Enter your browser here (e.g., Chrome, Firefox, Safari, Docker Desktop)
     validations:
       required: true
 
   - type: input
     id: lab-details
     attributes:
-      label: What lab is being accessed
+      label: Lab Details
       description: Please specify which lab you are working on.
       placeholder: Enter the lab name or number
     validations:
@@ -49,7 +49,7 @@ body:
   - type: textarea
     id: issue-description
     attributes:
-      label: Describe the Issue
+      label: Issue Description
       description: Please provide a detailed description of the issue you're encountering.
       placeholder: Enter the details of your issue here
     validations:
@@ -58,6 +58,6 @@ body:
   - type: textarea
     id: additional-feedback
     attributes:
-      label: Any other feedback
+      label: Additional Feedback
       description: Do you have any other feedback or comments about the lab?
       placeholder: Enter any additional feedback here

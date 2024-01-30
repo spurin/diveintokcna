@@ -4,7 +4,7 @@ title: "[Course Content Issue]: <Enter course content issue title here>"
 body:
   - type: markdown
     attributes:
-      value: "## Thank You for Your Feedback!\nWe appreciate you taking the time to provide feedback on our course content. Your input is invaluable in helping us improve and maintain the quality of our courses."
+      value: "## Course Content Feedback\nWe appreciate you taking the time to provide feedback on our course content. Your input is invaluable in helping us improve and maintain the quality of our courses."
 
   - type: input
     id: course-access-location
@@ -36,7 +36,7 @@ body:
     attributes:
       label: Lesson Details
       description: Could you please specify the lesson your feedback is about?
-      placeholder: Enter lesson name
+      placeholder: Enter lesson name or number
     validations:
       required: true
 
