@@ -1,0 +1,59 @@
+name: Quiz Question Issue
+description: Report an issue with a quiz question
+title: "[Quiz Question Issue]: <Enter quiz question issue title here>"
+body:
+  - type: markdown
+    attributes:
+      value: "## Quiz Question Issue Report\nWe appreciate your time in providing feedback on our quiz questions. Your insights are crucial for ensuring the quality and accuracy of our quizzes."
+
+  - type: input
+    id: course-access-location
+    attributes:
+      label: Course Access Location
+      description: Where are you accessing the quiz from? (e.g., specific platform, website, etc.)
+      placeholder: Enter the location or platform where you are accessing the quiz
+    validations:
+      required: true
+
+  - type: dropdown
+    id: course-section
+    attributes:
+      label: Course Section
+      description: Which section of the course does the quiz relate to?
+      options:
+        - Section 01 - Course and Cloud Native Introduction
+        - Section 02 - Cloud Native Architecture
+        - Section 03 - Containers
+        - Section 04 - Kubernetes Fundamentals
+        - Section 05 - Kubernetes Deep Dive
+        - Section 06 - Telemetry & Observability
+        - Section 07 - Cloud Native Application Delivery
+        - Section 08 - Course Quiz Summaries
+        - Section 09 - Practice Exams
+    validations:
+      required: true
+
+  - type: input
+    id: quiz-details
+    attributes:
+      label: Quiz Details
+      description: Please specify which quiz and question you are referring to.
+      placeholder: Enter the quiz name and question
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Please provide a detailed description of the issue with the quiz question.
+      placeholder: Describe the issue with the question here
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: Additional Comments
+      description: Do you have any other feedback or comments about the quiz question?
+      placeholder: Any additional comments or suggestions
