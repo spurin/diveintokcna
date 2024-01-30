@@ -1,0 +1,58 @@
+name: Course Content Feedback
+description: Provide feedback on course content
+title: "[Course Content Issue]"
+body:
+  - type: markdown
+    attributes:
+      value: "## Thank You for Your Feedback!\nWe appreciate you taking the time to provide feedback on our course content. Your input is invaluable in helping us improve and maintain the quality of our courses."
+  
+  - type: input
+    id: contact-info
+    attributes:
+      label: Contact Information
+      description: If we need further information to understand your feedback, how can we get in touch with you? (Please provide your email or preferred method of contact)
+      placeholder: Enter your email or preferred contact method here
+    validations:
+      required: true
+
+  - type: dropdown
+    id: course-section
+    attributes:
+      label: Course Section
+      description: Which section of the course does your feedback relate to?
+      options:
+        - Section 01 - Course and Cloud Native Introduction
+        - Section 02 - Cloud Native Architecture
+        - Section 03 - Containers
+        - Section 04 - Kubernetes Fundamentals
+        - Section 05 - Kubernetes Deep Dive
+        - Section 06 - Telemetry & Observability
+        - Section 07 - Cloud Native Application Delivery
+    validations:
+      required: true
+
+  - type: input
+    id: lesson-details
+    attributes:
+      label: Lesson Details
+      description: Could you please specify the lesson your feedback is about?
+      placeholder: Enter lesson name
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback-overview
+    attributes:
+      label: Feedback Overview
+      description: Please provide a detailed overview of the issue. Include specific timestamps if applicable.
+      placeholder: Enter your feedback here
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: Additional Comments
+      description: Is there anything else you would like to add?
+      placeholder: Any additional comments or suggestions
+
