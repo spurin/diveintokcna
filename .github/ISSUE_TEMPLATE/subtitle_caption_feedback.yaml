@@ -1,0 +1,57 @@
+name: Subtitle/Caption Report
+description: Provide feedback on subtitles/captions
+title: "[Subtitle/Caption Report]: <Enter subtitle/caption issue title here>"
+body:
+  - type: markdown
+    attributes:
+      value: "## Subtitle/Caption Feedback\nWe always aim to provide accurate English subtitles for all our lessons. If you encounter any issues with incorrect information or subtitles being out of sync, please let us know. Your feedback is crucial for us to maintain the quality and accessibility of our courses."
+
+  - type: input
+    id: course-access-location
+    attributes:
+      label: Course Access Location
+      description: Where are you accessing the course with subtitles/captions from? (e.g., specific platform, website, etc.)
+      placeholder: Enter the location or platform where you are accessing the course
+    validations:
+      required: true
+
+  - type: dropdown
+    id: course-section
+    attributes:
+      label: Course Section
+      description: Which section of the course does your subtitle/caption feedback relate to?
+      options:
+        - Section 01 - Course and Cloud Native Introduction
+        - Section 02 - Cloud Native Architecture
+        - Section 03 - Containers
+        - Section 04 - Kubernetes Fundamentals
+        - Section 05 - Kubernetes Deep Dive
+        - Section 06 - Telemetry & Observability
+        - Section 07 - Cloud Native Application Delivery
+    validations:
+      required: true
+
+  - type: input
+    id: lesson-details
+    attributes:
+      label: Lesson Details
+      description: Please specify the lesson for which you are providing subtitle/caption feedback.
+      placeholder: Enter the lesson name or number
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Please provide a detailed description of the issue with the subtitles/captions with timestamps where possible.
+      placeholder: Describe the issue with the subtitles/captions here
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: Additional Comments
+      description: Do you have any other feedback or comments about the subtitles/captions?
+      placeholder: Any additional comments or suggestions
