@@ -1,5 +1,5 @@
 name: Subtitle/Caption Report
-description: Provide feedback on subtitles/captions
+description: Report an issue with subtitles/captions
 title: "[Subtitle/Caption Report]: <Enter subtitle/caption issue title here>"
 body:
   - type: markdown
