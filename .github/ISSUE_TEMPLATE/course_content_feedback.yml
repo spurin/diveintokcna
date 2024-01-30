@@ -1,17 +1,17 @@
 name: Course Content Feedback
 description: Provide feedback on course content
-title: "[Course Content Issue]"
+title: "[Course Content Issue]: <Enter course content issue title here>"
 body:
   - type: markdown
     attributes:
       value: "## Thank You for Your Feedback!\nWe appreciate you taking the time to provide feedback on our course content. Your input is invaluable in helping us improve and maintain the quality of our courses."
-  
+
   - type: input
-    id: contact-info
+    id: course-access-location
     attributes:
-      label: Contact Information
-      description: If we need further information to understand your feedback, how can we get in touch with you? (Please provide your email or preferred method of contact)
-      placeholder: Enter your email or preferred contact method here
+      label: Course Access Location
+      description: Where are you accessing the course from? (e.g., specific platform, website, etc.)
+      placeholder: Enter the location or platform where you are accessing the course
     validations:
       required: true
 
@@ -55,4 +55,3 @@ body:
       label: Additional Comments
       description: Is there anything else you would like to add?
       placeholder: Any additional comments or suggestions
-
