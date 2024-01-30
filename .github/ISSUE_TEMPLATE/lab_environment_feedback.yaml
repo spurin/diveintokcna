@@ -42,7 +42,7 @@ body:
     attributes:
       label: Lab Details
       description: Please specify which lab you are working on.
-      placeholder: Enter the lab name or number
+      placeholder: Enter the lab name
     validations:
       required: true
 
