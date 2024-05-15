@@ -4,7 +4,7 @@ This tutorial supports you in running a Kubernetes lab, accessible in your brows
 
 ## Pre-requisite
 
-* Install a current version of docker-compose, new releases available [here](https://github.com/docker/compose/releases)
+- Install a current version of docker-compose, new releases available [here](https://github.com/docker/compose/releases)
 
 ## Clone this specific branch and change to the directory
 
@@ -31,10 +31,10 @@ cd diveintokcna
 ./stop.sh
 ```
 
-## Starting the Lab Environment (Windows CMD)
+## Stopping the Lab Environment (Windows CMD)
 
 ```
-./start.bat
+./stop.bat
 ```
 
 ![DiveInto](https://raw.githubusercontent.com/spurin/diveintokcna/main/DiveIntoKCNA_Cover.png)
