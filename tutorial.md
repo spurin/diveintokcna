@@ -1,6 +1,6 @@
 # Dive Into Cloud Native, Containers, Kubernetes and the Kubernetes and Cloud Native Associate Certification - GCP Cloud Shell - Tutorial
 
-![DiveInto](https://raw.githubusercontent.com/spurin/diveintokcna/main/DiveIntoKCNA_Cover.png)
+![DiveInto](https://raw.githubusercontent.com/spurin/diveintokcna/cloudshell/DiveIntoKCNA_Cover.png)
 
 This tutorial provides you with a fully working Kubernetes lab, accessible in your browser 🚀
 
