@@ -33,9 +33,11 @@ When this completes, you'll see text similar to the following -
  ✔ Container portal-dive-into-kcna                 Started                                                                                           3.0s 
 ```
 
-In the lab environment we make use of a convenient Reverse Proxy to access Kubernetes web services. Sometimes, we may need to permit access to this from Google Cloud Shell. 
+🚨 Important Step! - Must Be Completed Every Time 🚨
 
-Let's confirm that this is accessible. Run the following command to create your URL endpoint. Once done, click the generated URL, you should see the DiveInto Reverse Proxy with a blue background. You can then close the tab and continue.
+This step must be completed each time the lab environment is set up. The lab environment uses a Reverse Proxy to access Kubernetes web services. Occasionally, this may require permitting access from Google Cloud Shell.
+
+To confirm accessibility, run the following command to generate your URL endpoint. After running the command, click the generated URL. You may be prompted to sign in. Once done, you should see the DiveInto Reverse Proxy with a blue background. After confirming, you can close the tab and continue.
 
 ```bash
 echo https://32536-$WEB_HOST/testproxy
