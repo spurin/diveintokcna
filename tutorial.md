@@ -9,7 +9,7 @@ Execute the following command to setup the lab environment.
 For convenience you can send this to the terminal using the convenient 'Copy to Cloud Shell' icon on the top right of the text box
 
 ```bash
-bin/docker-compose up -d
+docker compose up -d
 ```
 
 When this completes, you'll see text similar to the following -
@@ -52,5 +52,5 @@ When accessing terminals, the default credentials are root/root
 Should you require, you can factory reset the environment with the following, your terminals will disconnect and reconnect -
 
 ```bash
-bin/docker-compose down -v; bin/docker-compose up -d
+docker compose down -v; docker compose up -d
 ```
